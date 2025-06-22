@@ -3,9 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Play, Users, Video, Theater, MessageCircle, Check, Clock, Star } from "lucide-react"
+import {  SingleVideoPlayer } from "@/components/ui/single-video-player"
 
 export default function ServicosPage() {
   return (
+
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -84,14 +86,7 @@ export default function ServicosPage() {
 
                 <div className="space-y-4">
                   <div className="relative">
-                    <img
-                      src="/videoreprisesesenac.mpg"
-                      alt="Teatro de Reprise"
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
-                    <Button className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/70 hover:bg-black/90">
-                      <Play className="h-6 w-6 text-white" />
-                    </Button>
+                    <SingleVideoPlayer thumbnail="/teatrodereprise.jpg" videoUrl="/videoreprise.mp4" alt="Teatro de Reprise" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <img
@@ -156,14 +151,7 @@ export default function ServicosPage() {
 
                 <div className="space-y-4">
                   <div className="relative">
-                    <img
-                      src="/placeholder.svg?height=300&width=500&text=Emovídeo"
-                      alt="Emovídeo"
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
-                    <Button className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/70 hover:bg-black/90">
-                      <Play className="h-6 w-6 text-white" />
-                    </Button>
+                    <SingleVideoPlayer thumbnail="/emovideo.png" videoUrl="/EMOVIDEO .mp4" alt="Teatro de Reprise" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <img
@@ -188,34 +176,33 @@ export default function ServicosPage() {
                     <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
                       <Users className="h-6 w-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold text-black">Teatro Tradicional</h2>
+                    <h2 className="text-3xl font-bold text-black">Teatro Debate</h2>
                   </div>
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    Peças teatrais clássicas adaptadas para o ambiente corporativo. Promovemos cultura e entretenimento
-                    enquanto transmitimos mensagens importantes sobre liderança, trabalho em equipe e valores
-                    organizacionais.
+                    Espetáculos que provocam reflexão e diálogo sobre questões sociais urgentes. 
+                    Promovemos cultura e conscientização enquanto abrimos espaço para o público discutir temas como violência, preconceito e direitos humanos.
                   </p>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-green-600 mt-1" />
+                      <Check className="h-5 w-7 text-green-600 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-black">Repertório Clássico</h4>
-                        <p className="text-gray-600">Peças adaptadas para contexto corporativo</p>
+                        <h4 className="font-semibold text-black">Temas Atuais</h4>
+                        <p className="text-gray-600">Cenas que retratam dilemas sociais e provocam reflexão</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-green-600 mt-1" />
+                      <Check className="h-5 w-10 text-green-600 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-black">Mensagens Corporativas</h4>
-                        <p className="text-gray-600">Valores e conceitos organizacionais integrados</p>
+                        <h4 className="font-semibold text-black">Reflexão Coletiva</h4>
+                        <p className="text-gray-600">Momentos de debate ao final da apresentação, com mediação e participação ativa do público</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-green-600 mt-1" />
+                      <Check className="h-5 w-7  text-green-600 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-black">Experiência Cultural</h4>
-                        <p className="text-gray-600">Entretenimento de alta qualidade</p>
+                        <h4 className="font-semibold text-black">Experiência Transformadora</h4>
+                        <p className="text-gray-600">Arte como ferramenta de diálogo, educação e mudança social</p>
                       </div>
                     </div>
                   </div>
@@ -229,25 +216,18 @@ export default function ServicosPage() {
 
                 <div className="space-y-4">
                   <div className="relative">
-                    <img
-                      src="/placeholder.svg?height=300&width=500&text=Teatro Tradicional"
-                      alt="Teatro Tradicional"
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
-                    <Button className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/70 hover:bg-black/90">
-                      <Play className="h-6 w-6 text-white" />
-                    </Button>
+                    <SingleVideoPlayer thumbnail="/chica3.png" videoUrl="/chicavideo.mp4" alt="Chica" /> 
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <img
-                      src="/placeholder.svg?height=150&width=250&text=Peça 1"
+                      src="/chica3.png"
                       alt="Peça 1"
-                      className="w-full h-32 object-cover rounded-lg"
+                      className="w-full h-40 object-cover rounded-lg"
                     />
                     <img
-                      src="/placeholder.svg?height=150&width=250&text=Peça 2"
+                      src="/violencia.png"
                       alt="Peça 2"
-                      className="w-full h-32 object-cover rounded-lg"
+                      className="w-full h-40 object-cover rounded-lg"
                     />
                   </div>
                 </div>
@@ -301,14 +281,7 @@ export default function ServicosPage() {
 
                 <div className="space-y-4">
                   <div className="relative">
-                    <img
-                      src="/placeholder.svg?height=300&width=500&text=Vídeos de Comédia"
-                      alt="Vídeos de Comédia"
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
-                    <Button className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/70 hover:bg-black/90">
-                      <Play className="h-6 w-6 text-white" />
-                    </Button>
+                    <SingleVideoPlayer thumbnail="/#" videoUrl="/#" alt="#" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <img

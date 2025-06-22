@@ -1,39 +1,60 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const videos = [
   {
     id: 1,
-    thumbnail: "/placeholder.svg?height=400&width=600",
-    title: "Teatro de Reprise - Empresa XYZ",
-    description: "Transformação organizacional através do teatro",
+    thumbnail: "/chica3.png",
+    title: "Teatro Debate - Chica, Maria, José ",
+    description: "Treatro abordando temas sociais com humor e reflexão",
+    videoUrl: "/chicavideo.mp4",
   },
   {
     id: 2,
-    thumbnail: "/placeholder.svg?height=400&width=600",
-    title: "Emovídeo - História de Sucesso",
-    description: "Cliente conta sua história em formato teatral",
+    thumbnail: "/teatrodereprise.jpg",
+    title: "Teatro Reprise - Explicação",
+    description: "Explicação rápida sobre o teatro reprise e sua importância",
+    videoUrl: "/videoreprise.mp4",
   },
   {
     id: 3,
-    thumbnail: "/placeholder.svg?height=400&width=600",
-    title: "Comédia Corporativa - Dia a Dia",
-    description: "Humor inteligente sobre o ambiente de trabalho",
+    thumbnail: "/emovideo.png",
+    title: "EMOVIDEO - Faça ja para quem ama!",
+    description: "Um pequeno convite para o EMOVIDEO",
+    videoUrl: "/EMOVIDEO .mp4",
   },
 ]
 
 export function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  const startCarousel = () => {
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length)
     }, 5000)
-    return () => clearInterval(timer)
-  }, [])
+  }
+
+  const stopCarousel = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }
+
+  useEffect(() => {
+    if (!isModalOpen) {
+      startCarousel()
+    } else {
+      stopCarousel()
+    }
+
+    return () => stopCarousel()
+  }, [isModalOpen])
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + videos.length) % videos.length)
@@ -41,6 +62,14 @@ export function VideoCarousel() {
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length)
+  }
+
+  const handlePlayVideo = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
   }
 
   return (
@@ -52,7 +81,11 @@ export function VideoCarousel() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <Button size="lg" className="bg-white/20 hover:bg-white/30 text-white border-white/30">
+          <Button
+            size="lg"
+            className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+            onClick={handlePlayVideo}
+          >
             <Play className="mr-2 h-5 w-5" />
             Assistir Vídeo
           </Button>
@@ -95,6 +128,32 @@ export function VideoCarousel() {
         <h3 className="font-semibold text-lg">{videos[currentIndex].title}</h3>
         <p className="text-sm text-white/80">{videos[currentIndex].description}</p>
       </div>
+
+      {/* Modal de vídeo */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+          <div className="relative w-full max-w-3xl p-4">
+            <button
+              className="absolute top-2 right-2 text-white text-xl"
+              onClick={handleCloseModal}
+            >
+              ✖
+            </button>
+            <div className="aspect-video w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src={videos[currentIndex].videoUrl + "?autoplay=1"}
+                title={videos[currentIndex].title}
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
+
