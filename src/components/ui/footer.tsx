@@ -55,16 +55,16 @@ export function Footer() {
             <div className="space-y-4 text-gray-400">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4" />
-                <span>contato@taocultural.com.br</span>
+                <span>damarisf575@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4" />
-                <span>(11) 99999-9999</span>
+                <span>(11) 97213-9531</span>
               </div>
               <p className="pt-2">
                 <strong>Damaris Ferreira</strong>
                 <br />
-                <strong>Célio de Sousa Ferreira Filho</strong>
+                <strong>Célio de Sousa</strong>
               </p>
             </div>
           </div>
@@ -73,16 +73,15 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-6">Serviços</h4>
             <ul className="space-y-3 text-gray-400">
               <li>Teatro de Reprise</li>
-              <li>Emovídeo Corporativo</li>
-              <li>Teatro Tradicional</li>
-              <li>Vídeos de Comédia</li>
-              <li>Consultoria em Psicodrama</li>
+              <li>Emovídeo</li>
+              <li>Teatro Debate</li>
+              <li>Criações exclusivas</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 TAO Cultural. Todos os direitos reservados.</p>
+          <p>&copy; 2025 TAO Cultural. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

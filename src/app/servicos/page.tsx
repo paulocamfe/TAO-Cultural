@@ -36,8 +36,8 @@ export default function ServicosPage() {
             <TabsList className="grid w-full grid-cols-4 mb-12">
               <TabsTrigger value="reprise">Teatro de Reprise</TabsTrigger>
               <TabsTrigger value="emovideo">Emovídeo</TabsTrigger>
-              <TabsTrigger value="tradicional">Teatro Tradicional</TabsTrigger>
-              <TabsTrigger value="comedia">Vídeos de Comédia</TabsTrigger>
+              <TabsTrigger value="tradicional">Teatro Debate</TabsTrigger>
+              <TabsTrigger value="comedia">Criações exclusivas</TabsTrigger>
             </TabsList>
 
             <TabsContent value="reprise" className="space-y-12">
@@ -80,7 +80,7 @@ export default function ServicosPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h4 className="font-semibold text-black mb-2">Investimento</h4>
                     <div className="text-2xl font-bold text-black mb-2">A partir de R$ 8.500</div>
-                    <p className="text-sm text-gray-600">Workshop completo para até 30 participantes</p>
+                    <p className="text-sm text-gray-600">Teatro de reprise completo</p>
                   </div>
                 </div>
 
@@ -210,7 +210,7 @@ export default function ServicosPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h4 className="font-semibold text-black mb-2">Investimento</h4>
                     <div className="text-2xl font-bold text-black mb-2">A partir de R$ 6.500</div>
-                    <p className="text-sm text-gray-600">Apresentação de 45-60 minutos</p>
+                    <p className="text-sm text-gray-600">Apresentação de 45-60 minutos + Debate no final</p>
                   </div>
                 </div>
 
@@ -241,33 +241,33 @@ export default function ServicosPage() {
                     <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
                       <MessageCircle className="h-6 w-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold text-black">Vídeos de Comédia</h2>
+                    <h2 className="text-3xl font-bold text-black">Criações exclusivas</h2>
                   </div>
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    Conteúdo humorístico que retrata o dia a dia corporativo de forma inteligente e divertida. Ideal
-                    para comunicação interna, redes sociais corporativas e eventos empresariais.
+                    Transforme a sua mensagem em uma experiência única.
+                    Nossa equipe cria apresentações e vídeos totalmente personalizados, de acordo com o objetivo, público e linguagem da sua empresa.
                   </p>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start space-x-3">
                       <Check className="h-5 w-5 text-green-600 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-black">Humor Inteligente</h4>
-                        <p className="text-gray-600">Comédia que diverte e ensina</p>
+                        <h4 className="font-semibold text-black">Personalização Total</h4>
+                        <p className="text-gray-600">Roteiro, formato e linguagem criados especialmente para sua empresa.</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="h-5 w-5 text-green-600 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-black">Conteúdo Viral</h4>
-                        <p className="text-gray-600">Formato otimizado para redes sociais</p>
+                        <h4 className="font-semibold text-black">Foco no Objetivo</h4>
+                        <p className="text-gray-600">Conteúdos alinhados ao resultado que você quer alcançar.</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-green-600 mt-1" />
+                      <Check className="h-5 w-7 text-green-600 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-black">Série Personalizada</h4>
-                        <p className="text-gray-600">Episódios baseados na sua empresa</p>
+                        <h4 className="font-semibold text-black">Atuação Profissional</h4>
+                        <p className="text-gray-600">Atores experientes que transformam sua mensagem em uma experiência envolvente e memorável.</p>
                       </div>
                     </div>
                   </div>
@@ -275,7 +275,7 @@ export default function ServicosPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h4 className="font-semibold text-black mb-2">Investimento</h4>
                     <div className="text-2xl font-bold text-black mb-2">A partir de R$ 3.500</div>
-                    <p className="text-sm text-gray-600">Pacote com 5 vídeos de 2-3 minutos</p>
+                    <p className="text-sm text-gray-600">Totalmente personalizado</p>
                   </div>
                 </div>
 
@@ -318,7 +318,7 @@ export default function ServicosPage() {
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-bold text-black"> </CardTitle>
                   <div className="text-4xl font-bold text-black mt-4">Básico</div>
-                  <p className="text-gray-600">plano básico</p>
+                  <p className="text-gray-600">Plano básico</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3"> 
@@ -349,7 +349,7 @@ export default function ServicosPage() {
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-bold text-black"></CardTitle>
                   <div className="text-4xl font-bold text-black mt-4">Profissional</div>
-                  <p className="text-gray-600">Para médias empresas</p>
+                  <p className="text-gray-600">Plano profissional</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -380,7 +380,7 @@ export default function ServicosPage() {
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-bold text-black"></CardTitle>
                   <div className="text-4xl font-bold text-black mt-4">Empresarial</div>
-                  <p className="text-gray-600">Para grandes corporações</p>
+                  <p className="text-gray-600">Plano Empresarial</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3">

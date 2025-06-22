@@ -8,9 +8,9 @@ import { Footer } from "@/components/ui/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TAO Cultural - Teatro Corporativo & Psicodrama",
+  title: "TAO Cultural",
   description:
-    "Transformando empresas através do teatro. Damaris Ferreira e Célio de Sousa Ferreira Filho oferecem soluções teatrais para desenvolvimento organizacional.",
+    "Transformando empresas através do teatro. Damaris Ferreira e Célio de Sousa oferecem soluções teatrais para desenvolvimento organizacional.",
 }
 
 export default function RootLayout({
